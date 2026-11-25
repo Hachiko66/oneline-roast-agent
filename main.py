@@ -109,6 +109,8 @@ def choose_line():
             continue
         if "\n" in line or "\r" in line:
             continue
+        if line.strip() != line:
+            continue
         if "agent" not in line.lower():
             continue
         if not line.strip():
